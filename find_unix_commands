@@ -1,0 +1,23 @@
+List all files found in the current directory and its hierarchy
+
+$ find.
+List all files found in the current hierarchy, and all the hierarchy below /home/xyz
+
+$ find. /home/XYZ
+Search for a file by the name abc in the current directory and its hierarchy
+
+$ find ./ -name abc
+Search for a directory by the name xyz in the current directory and its hierarchy
+
+$ find ./ -type d -name xyz
+Search for a file by the name abc.txt below the current directory, and prompt the user to delete each match.
+
+Note that the “{}” string is substituted by the actual file name while running and that the “\;” string is used to terminate the command to be executed.
+
+$ find ./ -name abc.txt -exec rm -i {} \;
+Search for files that were modified in the last 7 days below the current directory
+
+$ find ./ -mtime -7
+Search for files that have all permissions set in the current hierarchy
+
+$ find ./ -perm 777
