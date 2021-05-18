@@ -210,3 +210,4 @@ Git config and commands:
     Syntax: git push
 
     ex: git push
+** If a single repository is used by 2 users A and B, if A pushed any file to repo and then B needs to pull the changes made in GIT and then try to push any file**
