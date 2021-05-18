@@ -1,0 +1,160 @@
+sudo -i -- root user
+cd /    --- root directory
+
+tree   -- folders structures 
+tree | more  --
+"sudo su -" force login with root
+
+Install ubuntu using vagrant:
+--> install vagrant application
+--> setup vagrant file and setup.sh file with config details
+--> install Gitbash and open terminal from source path
+--> run " vagrant up" command to start the installation
+
+
+satis@DESKTOP-F05H9I4 MINGW64 /d/DEVOPS/vagrant servers/ubuntu20.04
+$ vagrant ssh UBUNTU-SERVER
+Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.4.0-70-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue Apr 13 08:54:12 UTC 2021
+
+  System load:  0.18              Processes:               104
+  Usage of /:   3.5% of 38.71GB   Users logged in:         0
+  Memory usage: 20%               IPv4 address for enp0s3: 10.0.2.15
+  Swap usage:   0%                IPv4 address for enp0s8: 192.168.56.100
+
+
+0 updates can be installed immediately.
+0 of these updates are security updates.
+
+
+Last login: Tue Apr 13 08:53:39 2021 from 10.0.2.2
+vagrant@UBUNTU-SERVER:~$ sudo -i
+root@UBUNTU-SERVER:~# passwd root
+New password:
+Retype new password:
+passwd: password updated successfully
+root@UBUNTU-SERVER:~#
+
+
+===============================================================================
+
+root@UBUNTU-SERVER:~# apt install git
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+git is already the newest version (1:2.25.1-1ubuntu3.1).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+root@UBUNTU-SERVER:~# python --version
+
+Command 'python' not found, did you mean:
+
+  command 'python3' from deb python3
+  command 'python' from deb python-is-python3
+
+root@UBUNTU-SERVER:~# python3 --version
+Python 3.8.5
+root@UBUNTU-SERVER:~# python3
+Python 3.8.5 (default, Jan 27 2021, 15:41:15)
+[GCC 9.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> exit
+Use exit() or Ctrl-D (i.e. EOF) to exit
+>>>
+root@UBUNTU-SERVER:~# vi /etc/hostname
+root@UBUNTU-SERVER:~# exec bash
+root@UBUNTU-SERVER:~# hostnamectl set-hostname UBUNTU
+root@UBUNTU-SERVER:~# exec bash
+root@UBUNTU:~#
+
+
+=============================
+conneting to UBUNTU by gitbash
+with password:
+ssh root@192.168.56.100
+
+without password/with private key:
+ssh -i private.pem root@192.168.56.100
+
+passwordless authentication:
+
+
+
+
+
+GIT:
+
+$ history
+    1  pwd
+    2  ls
+    3  Vagrantup
+    4  vagrantup
+    5  vagrant up
+    6  vagrant ssh
+    7  vagrant ssh UBUNTU-SERVER
+    8  ssh root@192.168.56.100
+    9  ls
+   10  ls -lrt
+   11  vi imp_commands.txt
+   12  ls -lrt
+   13  ls
+   14  cd Downloads
+   15  cd /Downloads
+   16  git clone https://github.com/satishreddy339/myproj.git
+   17  ls -lrt
+   18  cd myproj
+   19  ls -lrt
+   20  vi myfile
+   21  ls -lrt
+   22  git status
+   23  git add .
+   24  git status
+   25  git commit
+   26  git config --global user.email "satish@example.com"
+   27  git config --global user.name "satishreddy"
+   28  git commit -m "save"
+   29  git push origin master
+   30  git push origin main
+   31  ls
+   32  cd ..
+   33  ls -lrt
+   34  mkdir myproj1
+   35  cd myproj1
+   36  ls
+   37  git init
+   38  ls -lrth
+   39  ls -la
+   40  vi new.txt
+   41  ls -lrt
+   42  git status
+   43  git add
+   44  git add .
+   45  git status
+   46  git commit
+   47  git commit -m "new"
+   48  git status
+   49  git push https://github.com/satishreddy339 master
+   50  git push https://github.com/satishreddy339/myproj1.git master
+   51  cd ..
+   52  ssh-keygen
+   53  cd /c/Users/satis/.ssh
+   54  cat id_rsa.pub
+   55  ls -lrt
+   56  cd /d/workspace/myproj1
+   57  ls -lrt
+   58  vi new2.txt
+   59  ls -lrt
+   60  git add .
+   61  git commit -m "save new"
+   62  git push git@github.com:satishreddy339/myproj1.git master
+   63  git status
+   64  vi new_test.txt
+   65  git add .
+   66  git commit -m "save"
+   67  git push git@github.com:satishreddy339/myproj1.git master
+   68  git status
+   69  history
