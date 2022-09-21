@@ -21,3 +21,5 @@ $ find ./ -mtime -7
 Search for files that have all permissions set in the current hierarchy
 
 $ find ./ -perm 777
+
+find important commands are recorder here
